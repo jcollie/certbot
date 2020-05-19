@@ -182,8 +182,8 @@ class AuthHandler(object):
 
             achalls.extend(self._challenge_factory(authzr, path))
 
-        if any(isinstance(achall.chall, challenges.TLSSNI01) for achall in achalls):
-            logger.warning("TLS-SNI-01 is deprecated, and will stop working soon.")
+        # if any(isinstance(achall.chall, challenges.TLSSNI01) for achall in achalls):
+        #     logger.warning("TLS-SNI-01 is deprecated, and will stop working soon.")
 
         return achalls
 
